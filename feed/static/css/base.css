@@ -1,0 +1,13 @@
+html {
+    background-color: LightCyan;
+}
+
+nav a {
+    color: DarkSlateBlue;
+    font-size: 1rem;
+    margin: 15px;
+}
+
+nav a:hover, ul a:active {
+    color: #eca8b5;
+}

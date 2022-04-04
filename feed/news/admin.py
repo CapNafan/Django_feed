@@ -4,4 +4,4 @@ from .models import NewsItem
 
 @admin.register(NewsItem)
 class NewItemAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title', 'publish_date', 'body')
