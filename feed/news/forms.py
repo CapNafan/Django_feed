@@ -5,7 +5,6 @@ from .models import NewsItem
 
 class NewsForm(ModelForm):
     class Meta:
-        pass
         model = NewsItem
         fields = ('title', 'body')
 

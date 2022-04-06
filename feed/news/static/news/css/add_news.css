@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    cursor: pointer;
+}

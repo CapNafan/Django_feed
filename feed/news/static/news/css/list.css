@@ -1,0 +1,31 @@
+ul {
+    display: table;
+    list-style-type: none;
+    background-color: #B2F5F3;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+ul li {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+}
+
+ul li h2 {
+    font-size: 35px;
+}
+
+ul li h4 {
+    font-size: 20px;
+}
+
+ul li p {
+    font-size: 15px;
+}
+
+ul a:hover, ul a:active {
+    color: #eca8b5;
+}
