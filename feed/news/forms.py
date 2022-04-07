@@ -6,10 +6,11 @@ from .models import NewsItem
 class NewsForm(ModelForm):
     class Meta:
         model = NewsItem
-        fields = ('title', 'body')
+        fields = ('title', 'body', 'image')
 
         labels = {'title': '',
-                  'body': ''}
+                  'body': '',
+                  'image': ''}
 
         widgets = {'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'News Title'}),
                    'body': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'News body'})

@@ -15,11 +15,14 @@
         <li>
             <h2>{{ item.title }}</h2>
             <h4>{{ item.body }}</h4>
+            {% if item.image %}
+                <img src="{{ item.image.url }}">
+            {% endif %}
             <p>Date published: {{item.publish_date}}</p>
-            <p>{{ item.image }}</p>
+            <p>___________________________________________</p>
         </li>
         {% endfor %}
     </ul>
     <br/>
-{{ news }}
+    {% include 'includes/navbar.html' %}
 {% endblock %}

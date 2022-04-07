@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from news.views import list_news, add_news
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
-    path('', list_news, name='feed'),
+    path('feed', list_news, name='feed'),
     path('admin/', admin.site.urls),
     path('add_news', add_news, name='add-news'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

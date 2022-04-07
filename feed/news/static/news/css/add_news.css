@@ -7,9 +7,10 @@ form {
 }
 
 input[type=submit] {
+    font-size: 15px;
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 10px 25px;
     cursor: pointer;
 }

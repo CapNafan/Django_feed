@@ -13,7 +13,7 @@ def list_news(request):
 def add_news(request):
     submitted = False
     if request.method == "POST":
-        form = NewsForm(request.POST)
+        form = NewsForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/add_news?submitted=True')
