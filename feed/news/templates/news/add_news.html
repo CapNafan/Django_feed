@@ -11,12 +11,16 @@
 {% block content %}
     {% include 'includes/navbar.html' %}
     <br>
-    <h1>Add news to the feed</h1>
+    {% if submitted %}
+        <h1>Your post was submitted successfully</h1> <br>
+    {% else %}
+        <h1>Add news to the feed</h1>
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
         {{ form.as_p }}
         <input type="submit" value="Post" class="btn btn-primary">
     </form>
+    {% endif %}
 
 {% endblock %}

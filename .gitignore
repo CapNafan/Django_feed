@@ -41,7 +41,6 @@ dist/
 downloads/
 eggs/
 Lib/
-Scripts/
 venv/
 lib64/
 parts/
