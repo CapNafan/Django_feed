@@ -1,0 +1,27 @@
+<form method="GET">
+    <select name="per_page" id="NewsPerPage">
+        <option disabled selected>News per page</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+    </select>
+    <input type="submit" value="Change">
+</form> <br>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if items.has_previous %}
+            <a href="?page=1&param={{param}}">&laquo; first</a>
+            <a href="?page={{ items.previous_page_number }}&param={{param}}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ items.number }} of {{ items.paginator.num_pages }}.
+        </span>
+
+        {% if items.has_next %}
+            <a href="?page={{ items.next_page_number }}&param={{param}}">next</a>
+            <a href="?page={{ items.paginator.num_pages }}&param={{param}}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
